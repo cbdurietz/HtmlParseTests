@@ -1,0 +1,11 @@
+﻿<article class="product-text" itemprop="description" data-description-container="product-main-description">
+<p>Alvedon innehåller paracetamol som är smärtlindrande och febernedsättande. Alvedon används vid feber, t. ex. vid förkylningar.</p>
+<p>Alvedon används även mot värk och smärtor av olika slag , t. ex. huvudvärk, tandvärk, menstruationssmärtor, muskelsmärtor och reumatiska smärtor.</p>
+<p>Alvedon kan användas av personer med känslig mage eller magsår och personer med ökad blödningsbenägenhet.</p>
+<p>Smak av svartvinbär.</p>
+<p>Från 12 år.</p> </article>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum facere molestiae, omnis, doloribus cumque alias impedit nulla, quae architecto excepturi repellat sed aliquam. Accusamus commodi perspiciatis aliquam officiis doloribus soluta.</p>
+<p>Eum iusto cupiditate eveniet? Quibusdam voluptatum, amet ab dolorem tempore nam maiores laborum nostrum sed aperiam voluptatibus, quos debitis dolorum rem voluptate perspiciatis vero dolores suscipit, autem quod. Magnam, maxime.</p>
+<p>Sapiente, hic laborum harum velit deserunt officiis voluptas, iusto eaque libero laudantium tempore quod ducimus porro dolor excepturi a aliquam dicta quia amet iure sed. Veritatis excepturi repellat reprehenderit illo.</p>
+<p>Magnam, assumenda cupiditate aperiam ducimus, perspiciatis voluptas velit sed suscipit minima quisquam voluptatum iure esse inventore, excepturi nisi! Odio omnis dicta, quis delectus voluptate harum modi commodi eaque placeat aliquam!</p>
+<p>Tempore possimus alias et distinctio deleniti sunt, fuga vero cupiditate cum molestiae nisi esse quis accusamus iste commodi illum officia. Eos facere rerum nam aut officia laborum blanditiis obcaecati id.</p>

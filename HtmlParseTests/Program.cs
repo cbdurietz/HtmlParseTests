@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using AngleSharp;
 using CsQuery.ExtensionMethods;
+using CsQuery.ExtensionMethods.Internal;
 
 namespace HtmlParseTests
 {
@@ -43,10 +44,12 @@ namespace HtmlParseTests
                 stopwatchCsQuery.Start();
                 for (var i = 0; i < iterations; i++)
                 {
+                    // Retrieving fragment to parse. 
                     CQ cs = htmlFragment;
-                    var pTags = cs["p"];
 
-                    resultingStringCsQuery = pTags.First().Text();
+                    // Parse fragment.
+                    var pTags = cs["p"];
+                    resultingStringCsQuery = pTags.Length > 0 ? pTags.First().Text() : htmlFragment;
                     //Console.WriteLine(resultingString);
                 }
                 stopwatchCsQuery.Stop();
@@ -55,6 +58,7 @@ namespace HtmlParseTests
                 stopwatchAgilityPack.Start();
                 for (var i = 0; i < iterations; i++)
                 {
+                    // Retrieving fragment to parse. 
                     var htmlDoc = new HtmlDocument()
                     {
                         OptionEmptyCollection = true,
@@ -62,22 +66,22 @@ namespace HtmlParseTests
                     };
                     htmlDoc.LoadHtml(htmlFragment);
 
-                    var elements = htmlDoc.DocumentNode.SelectNodes("//p");
-                    resultingStringHtmlAgilityPack = elements.Any() ? elements.First().InnerText : htmlFragment;
-                    //htmlDoc = null;
-                    //GC.Collect();
-
+                    // Parse fragment.
+                    var firstElement = htmlDoc.DocumentNode.SelectSingleNode("//p");
+                    resultingStringHtmlAgilityPack = firstElement != null ? firstElement.InnerText : htmlFragment;
                     //Console.WriteLine(resultingString);
                 }
 
                 stopwatchAngleSharp.Start();
                 for (var i = 0; i < iterations; i++)
                 {
+                    // Retrieving fragment to parse. 
                     var context = BrowsingContext.New(Configuration.Default);
                     var document = context.OpenAsync(req => req.Content(htmlFragment));
-                    var elements = document.Result.QuerySelectorAll("p");
-                    resultingStringAngleSharp = elements.Any() ? elements.First().TextContent: htmlFragment;
 
+                    // Parse fragment.
+                    var firstElement = document.Result.QuerySelector("p");
+                    resultingStringAngleSharp = firstElement != null ? firstElement.TextContent : htmlFragment;
                     //Console.WriteLine(resultingString);
                 }
                 stopwatchAngleSharp.Stop();

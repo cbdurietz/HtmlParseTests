@@ -1,12 +1,9 @@
-﻿using CsQuery;
+﻿using AngleSharp;
+using CsQuery;
 using HtmlAgilityPack;
 using System;
 using System.Diagnostics;
-using System.Linq;
 using System.Text;
-using AngleSharp;
-using CsQuery.ExtensionMethods;
-using CsQuery.ExtensionMethods.Internal;
 
 namespace HtmlParseTests
 {
